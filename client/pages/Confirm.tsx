@@ -217,14 +217,6 @@ export default function Confirm() {
 
                 <p className="mt-3 text-sm text-muted-foreground">A confirmation email will be sent with your booking details and receipt.</p>
 
-                <div className="mt-4 text-xs text-muted-foreground">
-                  <strong>SLO mapping</strong>
-                  <ul className="list-disc ml-5 mt-2">
-                    <li>SLO B: Clear labels, consent, transparent pricing.</li>
-                    <li>SLO C: Mobile-first, keyboard-only flow, high contrast, screen-reader friendly.</li>
-                    <li>SLO D: Efficient review + single-page checkout; visible totals and errors.</li>
-                  </ul>
-                </div>
 
               </form>
             </CardContent>
