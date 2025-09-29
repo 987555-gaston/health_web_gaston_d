@@ -9,7 +9,7 @@ export default function MainLayout() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground">
+    <div className="min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden">
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 bg-primary text-primary-foreground px-3 py-2 rounded-md">Skip to content</a>
       <header className="w-full border-b bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <div className="container mx-auto flex items-center justify-between py-4">
