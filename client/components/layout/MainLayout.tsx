@@ -16,7 +16,7 @@ export default function MainLayout() {
         <div className="container mx-auto flex items-center justify-between py-4">
           <Link to="/" className="flex items-center gap-3" aria-label="HealthyLife Community Clinic Home">
             <div className="h-9 w-9 rounded-md bg-primary/10 flex items-center justify-center" aria-hidden="true">
-              <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 text-primary"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-4H7v-2h4V7h2v4h4v2h-4Z"/></svg>
+              <Logo className="h-6 w-6" />
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold leading-none">HealthyLife</span>
