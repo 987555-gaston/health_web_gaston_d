@@ -29,10 +29,10 @@ export default function Index() {
         </div>
         <div>
           <Card className="shadow-sm">
-            <CardContent className="p-6">
+            <CardContent className="p-4 md:p-6">
               <h2 className="text-xl font-semibold">Quick Booking</h2>
               <p className="mt-2 text-sm text-muted-foreground">Find a doctor by date, specialty or service.</p>
-              <div className="mt-4 grid sm:grid-cols-2 gap-3">
+              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="grid gap-2">
                   <label className="text-sm font-medium" htmlFor="date">Date</label>
                   <input id="date" type="date" className="h-11 rounded-md border border-input bg-background px-3" aria-label="Choose a date" />
