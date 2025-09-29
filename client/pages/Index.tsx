@@ -17,11 +17,11 @@ export default function Index() {
           <p className="mt-4 text-lg text-muted-foreground max-w-prose">
             Book in-person or telehealth appointments with a simple, accessible experience designed for everyone. High-contrast, big buttons, clear labels, and secure payments.
           </p>
-          <div className="mt-6 flex flex-col sm:flex-row gap-3">
-            <Button asChild size="lg" className="text-base h-12 px-6" aria-label="Register as a new patient">
+          <div className="mt-6 flex flex-col sm:flex-row gap-3 w-full">
+            <Button asChild size="lg" className="text-base h-12 px-6 w-full sm:w-auto" aria-label="Register as a new patient">
               <Link to="/register">New Patient Registration</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="h-12" aria-label="Log in as existing patient">
+            <Button asChild size="lg" variant="outline" className="h-12 w-full sm:w-auto" aria-label="Log in as existing patient">
               <Link to="/login">Existing Patient Login</Link>
             </Button>
           </div>
