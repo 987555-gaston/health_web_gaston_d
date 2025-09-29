@@ -81,10 +81,10 @@ export default function Index() {
       </section>
 
       <section className="container py-8">
-        <div className="mx-auto w-full relative">
-          <img src="https://images.unsplash.com/photo-1758691462321-9b6c98c40f7e?q=80&w=3840&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Doctor speaking with an elderly patient" loading="lazy" className="block w-full h-96 object-cover rounded-md shadow-md" />
+        <div className="mx-auto relative w-full flex justify-center">
+          <img src="https://images.unsplash.com/photo-1758691462321-9b6c98c40f7e?q=80&w=3840&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Doctor speaking with an elderly patient" loading="lazy" className="mx-auto w-full max-w-5xl h-96 object-cover rounded-md shadow-md" />
           <div className="absolute inset-0 flex items-center justify-center px-4">
-            <div className="bg-black/45 px-6 py-4 rounded-md text-center max-w-3xl w-full sm:w-auto">
+            <div className="bg-black/45 px-6 py-4 rounded-md text-center max-w-3xl w-full sm:w-auto mx-auto">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white">You're in safe hands</h3>
               <p className="mt-2 text-sm sm:text-base text-white/90">Compassionate, secure care — clear consent, encrypted records, and respectful treatment for every patient.</p>
             </div>
