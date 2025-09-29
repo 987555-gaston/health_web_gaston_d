@@ -80,6 +80,18 @@ export default function Index() {
         </div>
       </section>
 
+      <section className="container py-8">
+        <div className="mx-auto max-w-5xl relative">
+          <img src="https://source.unsplash.com/BUNNEclz-yQ/1600x700" alt="Doctor speaking with an elderly patient" className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-lg shadow-md" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="bg-black/45 px-6 py-4 rounded-md text-center max-w-3xl">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white">You're in safe hands</h3>
+              <p className="mt-2 text-sm sm:text-base text-white/90">Compassionate, secure care — clear consent, encrypted records, and respectful treatment for every patient.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-slate-50 border-t">
         <div className="container py-10 grid gap-6 md:grid-cols-3">
           <Feature title="Secure & Private" description="Encrypted data, transparent consent, and secure payments.">
