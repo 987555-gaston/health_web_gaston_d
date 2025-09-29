@@ -31,50 +31,62 @@ export default function Index() {
           <Card className="shadow-sm">
             <CardContent className="p-4 md:p-6">
               <h2 className="text-xl font-semibold">Quick Booking</h2>
-              <p className="mt-2 text-sm text-muted-foreground">Find a doctor by date, specialty or service.</p>
-              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <p className="mt-2 text-sm text-muted-foreground">Search by doctor name, date, specialty, or service. Fill any combination of fields.</p>
+
+              <form onSubmit={(e) => { e.preventDefault(); const form = e.currentTarget as HTMLFormElement; const data = new FormData(form); const params = new URLSearchParams(); for (const [k,v] of data.entries()) { if (v && v.toString().trim() !== "") params.append(k, v.toString()); } const qs = params.toString(); window.location.href = `/booking${qs ? `?${qs}` : ""}`; }} className="mt-4 grid grid-cols-1 gap-3">
                 <div className="grid gap-2">
-                  <label className="text-sm font-medium" htmlFor="date">Date</label>
-                  <input id="date" type="date" className="h-11 rounded-md border border-input bg-background px-3" aria-label="Choose a date" />
+                  <label className="text-sm font-medium" htmlFor="doctor">Doctor name</label>
+                  <input id="doctor" name="doctor" type="text" placeholder="Dr. Smith or any name" className="h-11 rounded-md border border-input bg-background px-3" aria-label="Doctor name" />
                 </div>
-                <div className="grid gap-2">
-                  <label className="text-sm font-medium" htmlFor="specialty">Specialty</label>
-                  <select id="specialty" className="h-11 rounded-md border border-input bg-background px-3" aria-label="Choose a specialty">
-                    <option>Any</option>
-                    <option>General Practice</option>
-                    <option>Pediatrics</option>
-                    <option>Vaccination</option>
-                    <option>Telehealth</option>
-                  </select>
+
+                <div className="grid sm:grid-cols-2 gap-3">
+                  <div className="grid gap-2">
+                    <label className="text-sm font-medium" htmlFor="date">Date</label>
+                    <input id="date" name="date" type="date" className="h-11 rounded-md border border-input bg-background px-3" aria-label="Choose a date" />
+                  </div>
+
+                  <div className="grid gap-2">
+                    <label className="text-sm font-medium" htmlFor="specialty">Specialty</label>
+                    <select id="specialty" name="specialty" className="h-11 rounded-md border border-input bg-background px-3" aria-label="Choose a specialty">
+                      <option value="">Any</option>
+                      <option>Cardiologist</option>
+                      <option>GP</option>
+                      <option>Dentist</option>
+                      <option>Psychologist</option>
+                    </select>
+                  </div>
                 </div>
-              </div>
-              <div className="mt-3 grid sm:grid-cols-2 gap-3">
-                <div className="grid gap-2">
-                  <label className="text-sm font-medium" htmlFor="service">Service</label>
-                  <select id="service" className="h-11 rounded-md border border-input bg-background px-3" aria-label="Choose a service">
-                    <option>Consultation</option>
-                    <option>Vaccination</option>
-                    <option>Telehealth</option>
-                  </select>
+
+                <div className="mt-3 grid sm:grid-cols-2 gap-3">
+                  <div className="grid gap-2">
+                    <label className="text-sm font-medium" htmlFor="service">Service</label>
+                    <select id="service" name="service" className="h-11 rounded-md border border-input bg-background px-3" aria-label="Choose a service">
+                      <option value="">Any</option>
+                      <option>General Consultation</option>
+                      <option>Vaccination</option>
+                      <option>Telehealth Appointment</option>
+                    </select>
+                  </div>
+                  <div className="grid gap-2">
+                    <label className="text-sm font-medium" htmlFor="times">Preferred Time</label>
+                    <select id="times" name="times" className="h-11 rounded-md border border-input bg-background px-3" aria-label="Choose a preferred time">
+                      <option>Any</option>
+                      <option>Morning</option>
+                      <option>Afternoon</option>
+                      <option>Evening</option>
+                    </select>
+                  </div>
                 </div>
-                <div className="grid gap-2">
-                  <label className="text-sm font-medium" htmlFor="times">Preferred Time</label>
-                  <select id="times" className="h-11 rounded-md border border-input bg-background px-3" aria-label="Choose a preferred time">
-                    <option>Morning</option>
-                    <option>Afternoon</option>
-                    <option>Evening</option>
-                  </select>
+
+                <div className="mt-5 flex flex-col sm:flex-row gap-3">
+                  <button type="submit" className="h-12 px-6 text-base w-full sm:w-auto rounded-md bg-primary text-primary-foreground hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring">Search Doctors</button>
+                  <Button asChild variant="ghost" className="h-12 w-full sm:w-auto" aria-label="Learn about discounts">
+                    <Link to="/booking">See discount details</Link>
+                  </Button>
                 </div>
-              </div>
-              <div className="mt-5 flex flex-col sm:flex-row gap-3">
-                <Button asChild className="h-12 px-6 text-base w-full sm:w-auto" aria-label="Search for doctors">
-                  <Link to="/booking">Search Doctors</Link>
-                </Button>
-                <Button asChild variant="ghost" className="h-12 w-full sm:w-auto" aria-label="Learn about discounts">
-                  <Link to="/booking">See discount details</Link>
-                </Button>
-              </div>
-              <p className="mt-3 text-xs text-muted-foreground">All icons include alt text; site supports keyboard navigation.</p>
+
+                <p className="mt-3 text-xs text-muted-foreground">All fields are optional. Use Tab to navigate. Results open on the booking page.</p>
+              </form>
             </CardContent>
           </Card>
         </div>
