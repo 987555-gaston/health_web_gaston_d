@@ -13,6 +13,8 @@ import Register from "@/pages/Register";
 import Login from "@/pages/Login";
 import DoctorSearch from "@/pages/DoctorSearch";
 import ForgotPassword from "@/pages/ForgotPassword";
+import Confirm from "@/pages/Confirm";
+import Success from "@/pages/Success";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +31,8 @@ const App = () => (
             <Route path="/login" element={<Login />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/booking" element={<DoctorSearch />} />
+            <Route path="/confirm" element={<Confirm />} />
+            <Route path="/success" element={<Success />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Route>
