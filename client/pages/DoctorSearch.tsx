@@ -134,7 +134,7 @@ export default function DoctorSearch() {
                 <div className="mt-3 sm:mt-0 flex items-center gap-3">
                   <span className="text-sm text-muted-foreground">Available: {d.times.join(", ")}</span>
                   <Button asChild>
-                    <a href="#" className="h-10 px-4">Book</a>
+                    <a className="h-10 px-4" href={`/confirm?doctor=${encodeURIComponent(d.name)}&specialty=${encodeURIComponent(d.specialty)}&service=${encodeURIComponent(d.services[0])}&date=${encodeURIComponent(date)}&times=${encodeURIComponent(times)}`}>Book</a>
                   </Button>
                 </div>
               </CardContent>
