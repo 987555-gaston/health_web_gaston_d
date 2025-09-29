@@ -66,11 +66,11 @@ export default function Index() {
                   </select>
                 </div>
               </div>
-              <div className="mt-5 flex gap-3">
-                <Button asChild className="h-12 px-6 text-base" aria-label="Search for doctors">
+              <div className="mt-5 flex flex-col sm:flex-row gap-3">
+                <Button asChild className="h-12 px-6 text-base w-full sm:w-auto" aria-label="Search for doctors">
                   <Link to="/booking">Search Doctors</Link>
                 </Button>
-                <Button asChild variant="ghost" className="h-12" aria-label="Learn about discounts">
+                <Button asChild variant="ghost" className="h-12 w-full sm:w-auto" aria-label="Learn about discounts">
                   <Link to="/booking">See discount details</Link>
                 </Button>
               </div>
