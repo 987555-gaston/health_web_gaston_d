@@ -16,7 +16,7 @@ export default function Success() {
   const handleCalendar = () => {
     const start = date || new Date().toISOString().split("T")[0];
     const title = `Appointment with ${doctor}`;
-    const ics = `BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nUID:${id}\nSUMMARY:${title}\nDTSTART;VALUE=DATE:${start.replace(/-/g,"")}\nEND:VEVENT\nEND:VCALENDAR`;
+    const ics = `BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nUID:${id}\nSUMMARY:${title}\nDTSTART;VALUE=DATE:${start.replace(/-/g, "")}\nEND:VEVENT\nEND:VCALENDAR`;
     const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -40,7 +40,9 @@ export default function Success() {
   return (
     <div className="container py-8">
       <h1 className="text-3xl font-bold">Booking confirmed 🎉</h1>
-      <p className="mt-2 text-muted-foreground">We've emailed your confirmation and receipt to {email || "your email"}.</p>
+      <p className="mt-2 text-muted-foreground">
+        We've emailed your confirmation and receipt to {email || "your email"}.
+      </p>
 
       <Card className="mt-6">
         <CardContent className="p-4 md:p-6">
@@ -73,8 +75,12 @@ export default function Success() {
           </div>
 
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
-            <Button onClick={handleCalendar} className="h-12">Add to calendar</Button>
-            <Button onClick={handleDownload} variant="outline" className="h-12">Download receipt (TXT)</Button>
+            <Button onClick={handleCalendar} className="h-12">
+              Add to calendar
+            </Button>
+            <Button onClick={handleDownload} variant="outline" className="h-12">
+              Download receipt (TXT)
+            </Button>
             <Button asChild variant="ghost" className="h-12">
               <a href="/booking">Book another appointment</a>
             </Button>
