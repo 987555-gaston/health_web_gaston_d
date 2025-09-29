@@ -82,7 +82,7 @@ export default function Index() {
 
       <section className="container py-8">
         <div className="mx-auto relative max-w-[1024px] flex flex-col justify-start items-start">
-          <img src="https://images.unsplash.com/photo-1758691462321-9b6c98c40f7e?q=80&w=3840&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Doctor speaking with an elderly patient" loading="lazy" className="block w-full h-96 object-cover rounded-md shadow-md" />
+          <img src="https://images.unsplash.com/photo-1758691462321-9b6c98c40f7e?q=80&w=3840&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Doctor speaking with an elderly patient" loading="lazy" className="block w-auto self-stretch h-96 object-cover rounded-md shadow-md" />
           <div className="absolute inset-0 flex items-center justify-center w-[1024px] mx-auto">
             <div className="bg-black/45 px-6 py-4 rounded-md text-center max-w-3xl">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white">You're in safe hands</h3>
